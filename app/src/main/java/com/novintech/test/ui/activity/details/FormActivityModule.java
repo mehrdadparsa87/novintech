@@ -7,9 +7,9 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class DetailsActivityModule {
+public class FormActivityModule {
     @Provides
-    CustomProgress provideCustomProgress(DetailsActivity context) {
+    CustomProgress provideCustomProgress(FormActivity context) {
         return CustomProgress.getInstance(context);
     }
 }

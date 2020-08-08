@@ -14,7 +14,7 @@
             type="com.novintech.test.db.models.UserInfo" />
         <variable
             name="viewModel"
-            type="com.novintech.test.ui.activity.details.DetailsViewModel" />
+            type="com.novintech.test.ui.activity.details.FormViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

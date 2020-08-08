@@ -1,54 +1,53 @@
-package com.novintech.test.ui.activity.userlist;
+package com.novintech.test.ui.activity.details;
 
 import android.content.Context;
 
 import androidx.databinding.ObservableField;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.novintech.test.db.models.UserInfo;
 import com.novintech.test.repository.DataRepository;
 import com.novintech.test.utils.BaseViewModel;
 import com.novintech.test.utils.rx.SchedulerProvider;
-
-import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 
 @Singleton
-public class UserListViewModel extends BaseViewModel<UserListNavigator> {
+public class FormViewModel extends BaseViewModel<FormNavigator> {
 
-    public final MutableLiveData<String> items;
+    public final MutableLiveData<UserInfo> items;
 
 
     @Inject
-    public UserListViewModel(SchedulerProvider schedulerProvider, DataRepository mDataRepository) {
+    public FormViewModel(SchedulerProvider schedulerProvider, DataRepository mDataRepository) {
         super(schedulerProvider, mDataRepository);
         items = new MutableLiveData<>();
     }
 
-    public void fetchUsers(int page) {
-        if (page > 1) {
-            setIsLoading(true);
-        }
-        setServerError(false);
-        setNothingFound(false);
-        getCompositeDisposable().add(mRepository.userList(page)
+    public void fetchUser(int userID) {
+        setIsLoading(true);
+        getCompositeDisposable().add(mRepository.fetchData(userID)
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe((stringDataResponse) -> {
-                    if (stringDataResponse != null) {
-//                            items.setValue(stringDataResponse.data.code;
+                    if (stringDataResponse.getData() != null) {
+                        items.setValue(stringDataResponse.getData());
                         getNavigator().successResult(stringDataResponse.getData());
                     } else {
-                        getNavigator().unSuccess("");
+                        getNavigator().handleError(new Throwable());
                     }
                     setIsLoading(false);
                 }, throwable -> {
                     setIsLoading(false);
-                    setServerError(true);
                     getNavigator().handleError(throwable);
                 }));
+    }
+
+    public LiveData<UserInfo> getVehicleData() {
+        return items;
     }
 
 

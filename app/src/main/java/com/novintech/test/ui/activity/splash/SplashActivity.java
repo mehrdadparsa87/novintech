@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -15,9 +14,7 @@ import com.novintech.test.R;
 import com.novintech.test.classes.consts;
 import com.novintech.test.databinding.ActivitySplashBinding;
 import com.novintech.test.ui.activity.BaseActivity;
-import com.novintech.test.ui.activity.login.LoginActivity;
-import com.novintech.test.ui.activity.userlist.UserListActivity;
-import com.novintech.test.utils.element.CustomProgress;
+import com.novintech.test.ui.activity.details.FormActivity;
 import com.novintech.test.utils.factory.ViewModelProviderFactory;
 
 import javax.inject.Inject;
@@ -75,9 +72,6 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, SplashVi
         binding = getViewDataBinding();
 
 
-
-
-
         //stop thread for second for splash
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -87,15 +81,11 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, SplashVi
 
                     String userId = sharedPreferences.getString(consts.TOKEN, "0");
                     //check if user is register or not
-                    if (userId.length() > 2) {
-                        Intent  intent = new Intent(SplashActivity.this, UserListActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
+
+                    Intent intent = new Intent(SplashActivity.this, FormActivity.class);
+                    startActivity(intent);
+                    finish();
+
 
                 } catch (Exception e) {
 

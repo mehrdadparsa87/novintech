@@ -3,13 +3,9 @@ package com.novintech.test.utils.factory;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-
 import com.novintech.test.repository.DataRepository;
-import com.novintech.test.ui.activity.details.DetailsViewModel;
-
-import com.novintech.test.ui.activity.login.LoginViewModel;
+import com.novintech.test.ui.activity.details.FormViewModel;
 import com.novintech.test.ui.activity.splash.SplashViewModel;
-import com.novintech.test.ui.activity.userlist.UserListViewModel;
 import com.novintech.test.utils.rx.SchedulerProvider;
 
 import javax.inject.Inject;
@@ -39,18 +35,13 @@ public class ViewModelProviderFactory extends ViewModelProvider.NewInstanceFacto
             //noinspection unchecked
             return (T) new TurGuidViewModel(schedulerProvider, dataRepository);
         } else*/
-        if (modelClass.isAssignableFrom(LoginViewModel.class)) {
-            //noinspection unchecked
-            return (T) new LoginViewModel(schedulerProvider, dataRepository);
-        }else if (modelClass.isAssignableFrom(SplashViewModel.class)) {
+        if (modelClass.isAssignableFrom(SplashViewModel.class)) {
             //noinspection unchecked
             return (T) new SplashViewModel(schedulerProvider, dataRepository);
-        }else if (modelClass.isAssignableFrom(UserListViewModel.class)) {
+
+        } else if (modelClass.isAssignableFrom(FormViewModel.class)) {
             //noinspection unchecked
-            return (T) new UserListViewModel(schedulerProvider, dataRepository);
-        }else if (modelClass.isAssignableFrom(DetailsViewModel.class)) {
-            //noinspection unchecked
-            return (T) new DetailsViewModel(schedulerProvider, dataRepository);
+            return (T) new FormViewModel(schedulerProvider, dataRepository);
         }
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }
