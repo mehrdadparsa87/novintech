@@ -16,92 +16,140 @@
             android:orientation="vertical"
             android:padding="@dimen/spacing_large">
 
-            <TextView
+
+
+            <com.novintech.test.utils.element.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PAYMENT DETAILS"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="پرونده درمانگاه معتبر است؟"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40"
                 app:fontFamily="sans-serif-medium" />
 
-            <ImageView
-                android:layout_width="@dimen/spacing_xmlarge"
-                android:layout_height="@dimen/spacing_large"
-                android:layout_gravity="end"
+            <RadioGroup
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="بلی" />
+
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="خیر" />
+            </RadioGroup>
+
+            <com.novintech.test.utils.element.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_visa" />
+                android:text="تعرفه ها رعایت میشود؟"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                app:fontFamily="sans-serif-medium" />
 
-            <EditText
+            <RadioGroup
                 style="@style/EditText.Flat.Grey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_round_bg_outline"
-                android:drawableEnd="@drawable/ic_expand_arrow"
-                android:layout_marginTop="@dimen/spacing_middle"
-                android:drawableRight="@drawable/ic_expand_arrow"
-                android:hint="Card Type"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:text="Visa Express" />
+                android:orientation="horizontal">
 
-            <EditText
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="بلی" />
+
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="خیر" />
+            </RadioGroup>
+
+            <com.novintech.test.utils.element.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="اتوکلاو کلاس B وکیوم دارموجود است؟"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                app:fontFamily="sans-serif-medium" />
+
+            <RadioGroup
                 style="@style/EditText.Flat.Grey"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_middle"
-                android:background="@drawable/edit_text_round_bg_outline"
-                android:hint="Card Number"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:drawableEnd="@drawable/ic_credit_card_grey"
-                android:drawableRight="@drawable/ic_credit_card_grey"
-                android:text="88543 - 7043 - 2461 - 1195" />
+                android:orientation="horizontal">
 
-            <EditText
-                style="@style/EditText.Flat.Grey"
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="بلی" />
+
+                <com.novintech.test.utils.element.CustomRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="خیر" />
+            </RadioGroup>
+
+            <com.novintech.test.utils.element.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="آیتم های ضروری"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                app:fontFamily="sans-serif-medium" />
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_middle"
-                android:background="@drawable/edit_text_round_bg_outline"
-                android:hint="Name"
-                android:minHeight="@dimen/spacing_xmlarge"
-                android:drawableEnd="@drawable/ic_person_grey"
-                android:drawableRight="@drawable/ic_person_grey"
-                android:text="Laura Michelle" />
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.novintech.test.utils.element.CustomCheckBox
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size_8dp"
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:text="کپسول اکسیژن" />
+
+                <com.novintech.test.utils.element.CustomCheckBox
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:text="وسایل احیا" />
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <EditText
+                <com.novintech.test.utils.element.CustomCheckBox
                     style="@style/EditText.Flat.Grey"
-                    android:layout_width="0dp"
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableEnd="@drawable/ic_event_grey"
-                    android:drawableRight="@drawable/ic_event_grey"
-                    android:background="@drawable/edit_text_round_bg_outline"
-                    android:hint="Expired Date"
+                    android:layout_marginEnd="@dimen/size_8dp"
                     android:minHeight="@dimen/spacing_xmlarge"
-                    android:text="10/20" />
+                    android:text="آمیو بگ" />
 
-                <View
-                    android:layout_width="@dimen/spacing_middle"
-                    android:layout_height="0dp" />
-
-                <EditText
+                <com.novintech.test.utils.element.CustomCheckBox
                     style="@style/EditText.Flat.Grey"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/edit_text_round_bg_outline"
-                    android:hint="CVV"
-                    android:minHeight="@dimen/spacing_xmlarge"
-                    android:text="132" />
 
+                    android:minHeight="@dimen/spacing_xmlarge"
+                    android:text=" داروهای اورژانس" />
             </LinearLayout>
-
         </LinearLayout>
 
         <View
@@ -122,7 +170,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Save my Card Details"
+                android:text="محموع امتیاز"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/grey_80" />
 
@@ -130,11 +178,7 @@
                 android:layout_width="@dimen/spacing_middle"
                 android:layout_height="wrap_content" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                app:thumbTint="@color/switch_color_primary" />
+
 
             <View
                 android:layout_width="@dimen/spacing_middle"

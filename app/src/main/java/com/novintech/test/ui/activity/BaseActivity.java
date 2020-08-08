@@ -171,7 +171,7 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
      * this function will try to force set local to the activity
      */
     public void setLocal() {
-        String language = nbfunctions.getInstance(this).SettingManager_ReadString("language");
+        String language = "fa";//nbfunctions.getInstance(this).SettingManager_ReadString("language");
         Locale locale = new Locale(language);
         Resources resources = this.getResources();
 //        Locale locale = new Locale(ln);

@@ -170,12 +170,15 @@ public class FormActivity extends BaseActivity<ActivityCheckoutBinding, FormView
     private void displayFragment(State state) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+
         Fragment fragment = null;
         refreshStepTitle();
 
         if (state.name().equalsIgnoreCase(State.SHIPPING.name())) {
             fragment = new FragmentShipping();
             tv_shipping.setTextColor(getResources().getColor(R.color.grey_90));
+
             image_shipping.clearColorFilter();
         } else if (state.name().equalsIgnoreCase(State.PAYMENT.name())) {
             fragment = new FragmentPayment();

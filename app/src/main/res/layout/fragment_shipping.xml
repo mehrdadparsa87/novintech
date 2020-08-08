@@ -11,49 +11,67 @@
         android:orientation="vertical"
         android:padding="@dimen/spacing_large">
 
-        <TextView
+        <com.novintech.test.utils.element.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CONTACT DETAILS"
+            android:text="نام درمانگاه"
+            android:layout_marginTop="@dimen/spacing_large"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@color/grey_40"
             app:fontFamily="sans-serif-medium" />
 
-        <EditText
+        <com.novintech.test.utils.element.CustomEditText
             style="@style/EditText.Flat.Grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_large"
-            android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="Name"
-            android:minHeight="@dimen/spacing_xmlarge"
-            android:text="Laura Michelle" />
 
-        <EditText
+            android:background="@drawable/edit_text_round_bg_outline"
+            android:hint="مثال: درمانگاه مطهری"
+            android:minHeight="@dimen/spacing_xmlarge"
+           />
+        <com.novintech.test.utils.element.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تاریخ تاسیس"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/grey_40"
+            app:fontFamily="sans-serif-medium" />
+
+
+        <com.novintech.test.utils.element.CustomEditText
             style="@style/EditText.Flat.Grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_middle"
+
             android:background="@drawable/edit_text_round_bg_outline"
             android:hint="Email"
             android:minHeight="@dimen/spacing_xmlarge"
-            android:text="laura.michelle@mail.com" />
+            android:text="22-03-1399" />
 
-        <EditText
+        <com.novintech.test.utils.element.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:text="نام و نام خانوادگی"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/grey_40"
+            app:fontFamily="sans-serif-medium" />
+        <com.novintech.test.utils.element.CustomEditText
             style="@style/EditText.Flat.Grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_middle"
-            android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="Phone"
-            android:minHeight="@dimen/spacing_xmlarge"
-            android:text="(859) 261-0876" />
 
-        <TextView
+            android:background="@drawable/edit_text_round_bg_outline"
+
+            android:minHeight="@dimen/spacing_xmlarge"
+            android:hint="بهروز روستایی فارسی" />
+
+        <com.novintech.test.utils.element.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_large"
-            android:text="SHIPPING ADDRESS"
+            android:text="تعداد متوسط بیمارم"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@color/grey_40"
             app:fontFamily="sans-serif-medium" />
@@ -64,33 +82,44 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_large"
             android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="Address"
+            android:hint="مثال: 14 نفر"
             android:minHeight="@dimen/spacing_xmlarge"
-            android:text="1144 Central" />
+           />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <com.novintech.test.utils.element.CustomTextView
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_middle"
+            android:text="تعداد متوسط بیمار"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/grey_40"
+            app:fontFamily="sans-serif-medium" />
+        <LinearLayout
+            android:layout_marginBottom="@dimen/text_size_10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
             android:orientation="horizontal">
 
-            <EditText
+            <com.novintech.test.utils.element.CustomEditText
                 style="@style/EditText.Flat.Grey"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/edit_text_round_bg_outline"
-                android:hint="Country"
-                android:text="United State"
+
+                android:hint="مثال 4 نفر"
                 android:drawableEnd="@drawable/ic_expand_arrow"
                 android:drawableRight="@drawable/ic_expand_arrow"
+                app:fontFamily="sans-serif-medium"
                 android:minHeight="@dimen/spacing_xmlarge" />
 
             <View
                 android:layout_width="@dimen/spacing_middle"
                 android:layout_height="0dp" />
 
-            <EditText
+            <com.novintech.test.utils.element.CustomEditText
                 style="@style/EditText.Flat.Grey"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -98,33 +127,12 @@
                 android:background="@drawable/edit_text_round_bg_outline"
                 android:hint="ZIP Code"
                 android:text="41071"
+                app:fontFamily="sans-serif-medium"
                 android:minHeight="@dimen/spacing_xmlarge" />
 
         </LinearLayout>
 
-        <EditText
-            style="@style/EditText.Flat.Grey"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_middle"
-            android:drawableEnd="@drawable/ic_expand_arrow"
-            android:drawableRight="@drawable/ic_expand_arrow"
-            android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="City"
-            android:text="Newport"
-            android:minHeight="@dimen/spacing_xmlarge" />
 
-        <EditText
-            style="@style/EditText.Flat.Grey"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_middle"
-            android:drawableEnd="@drawable/ic_expand_arrow"
-            android:drawableRight="@drawable/ic_expand_arrow"
-            android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="State / Province"
-            android:text="Kentucky"
-            android:minHeight="@dimen/spacing_xmlarge" />
 
     </LinearLayout>
 

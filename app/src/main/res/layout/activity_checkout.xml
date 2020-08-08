@@ -6,7 +6,6 @@
     <data>
 
 
-
         <variable
             name="viewModel"
             type="com.novintech.test.ui.activity.details.FormViewModel" />
@@ -41,10 +40,10 @@
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.novintech.test.utils.element.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Checkout"
+                        android:text="فرم بازیدی از بخش داندان پزشکی"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/grey_80"
                         app:fontFamily="sans-serif-medium" />
@@ -61,8 +60,9 @@
                 android:paddingRight="@dimen/spacing_xxlarge"
                 android:paddingBottom="@dimen/spacing_middle">
 
-                <RelativeLayout
-                    android:layout_width="0dp"
+                <FrameLayout
+
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -77,8 +77,8 @@
                             android:id="@+id/line_first"
                             android:layout_width="0dp"
                             android:layout_height="3dp"
-                            android:layout_marginStart="@dimen/spacing_mxlarge"
-                            android:layout_marginLeft="@dimen/spacing_mxlarge"
+
+
                             android:layout_weight="1"
                             android:background="@color/grey_10" />
 
@@ -86,18 +86,16 @@
                             android:id="@+id/line_second"
                             android:layout_width="0dp"
                             android:layout_height="3dp"
-                            android:layout_marginEnd="@dimen/spacing_mxlarge"
-                            android:layout_marginRight="@dimen/spacing_mxlarge"
+
                             android:layout_weight="1"
                             android:background="@color/grey_10" />
 
                     </LinearLayout>
 
-                    <RelativeLayout
+                    <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true">
+                     android:layout_gravity="start">
 
                         <ImageView
                             android:id="@+id/image_shipping"
@@ -107,23 +105,24 @@
                             android:background="@android:color/white"
                             android:src="@drawable/shape_round_outline_primary" />
 
-                        <TextView
+                        <com.novintech.test.utils.element.CustomTextView
                             android:id="@+id/tv_shipping"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/spacing_mxlarge"
-                            android:text="Shipping"
+                            android:text=" درمانگاه"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/grey_90" />
 
-                    </RelativeLayout>
+                    </FrameLayout>
 
-                    <RelativeLayout
+                    <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true">
+                        android:layout_gravity="center">
 
                         <ImageView
+                            android:layout_gravity="top|center"
                             android:id="@+id/image_payment"
                             android:layout_width="@dimen/spacing_smlarge"
                             android:layout_height="@dimen/spacing_smlarge"
@@ -131,24 +130,24 @@
                             android:background="@android:color/white"
                             app:srcCompat="@drawable/shape_round_outline_primary" />
 
-                        <TextView
+                        <com.novintech.test.utils.element.CustomTextView
                             android:id="@+id/tv_payment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/spacing_mxlarge"
-                            android:text="Payment"
+                            android:text="نظر سنجی"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/grey_20" />
 
-                    </RelativeLayout>
+                    </FrameLayout>
 
-                    <RelativeLayout
+                    <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true">
+                        android:layout_gravity="end">
 
                         <ImageView
+                            android:layout_gravity="end"
                             android:id="@+id/image_confirm"
                             android:layout_width="@dimen/spacing_smlarge"
                             android:layout_height="@dimen/spacing_smlarge"
@@ -156,18 +155,18 @@
                             android:background="@android:color/white"
                             app:srcCompat="@drawable/shape_round_outline_primary" />
 
-                        <TextView
+                        <com.novintech.test.utils.element.CustomTextView
                             android:id="@+id/tv_confirm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/spacing_mxlarge"
-                            android:text="Confirm"
+                            android:text="پیش نمایش"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                             android:textColor="@color/grey_20" />
 
-                    </RelativeLayout>
+                    </FrameLayout>
 
-                </RelativeLayout>
+                </FrameLayout>
 
             </LinearLayout>
 
@@ -221,10 +220,10 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <com.novintech.test.utils.element.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Next"
+                            android:text="بعدی"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
                             android:textColor="@android:color/white" />
 
