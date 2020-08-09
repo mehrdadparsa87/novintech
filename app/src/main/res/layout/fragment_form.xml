@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -22,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:text="پرونده درمانگاه معتبر است؟"
+                android:text="پرونده درمانگاه معتبر است؟ (2 امتیاز)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40"
                 app:fontFamily="sans-serif-medium" />
@@ -48,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:text="تعرفه ها رعایت میشود؟"
+                android:text="تعرفه ها رعایت میشود؟ (3 امتیاز)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40"
                 app:fontFamily="sans-serif-medium" />
@@ -74,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:text="اتوکلاو کلاس B وکیوم دارموجود است؟"
+                android:text="اتوکلاو کلاس B وکیوم دارموجود است؟(2 امتیاز)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40"
                 app:fontFamily="sans-serif-medium" />
@@ -100,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
-                android:text="آیتم های ضروری"
+                android:text="آیتم های ضروری (4 امتیاز)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/grey_40"
                 app:fontFamily="sans-serif-medium" />
@@ -188,3 +193,4 @@
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
+</layout>

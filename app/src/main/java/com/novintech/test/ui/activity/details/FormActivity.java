@@ -21,12 +21,11 @@ import com.novintech.test.BR;
 import com.novintech.test.R;
 import com.novintech.test.classes.consts;
 import com.novintech.test.databinding.ActivityCheckoutBinding;
-import com.novintech.test.databinding.ActivityDetailsBinding;
 import com.novintech.test.db.models.UserInfo;
 import com.novintech.test.ui.activity.BaseActivity;
 import com.novintech.test.ui.fragment.FragmentConfirmation;
-import com.novintech.test.ui.fragment.FragmentPayment;
-import com.novintech.test.ui.fragment.FragmentShipping;
+import com.novintech.test.ui.fragment.FragmentForm;
+import com.novintech.test.ui.fragment.FragmentInfo;
 import com.novintech.test.utils.Tools;
 import com.novintech.test.utils.element.CustomProgress;
 import com.novintech.test.utils.factory.ViewModelProviderFactory;
@@ -176,12 +175,12 @@ public class FormActivity extends BaseActivity<ActivityCheckoutBinding, FormView
         refreshStepTitle();
 
         if (state.name().equalsIgnoreCase(State.SHIPPING.name())) {
-            fragment = new FragmentShipping();
+            fragment = new FragmentInfo();
             tv_shipping.setTextColor(getResources().getColor(R.color.grey_90));
 
             image_shipping.clearColorFilter();
         } else if (state.name().equalsIgnoreCase(State.PAYMENT.name())) {
-            fragment = new FragmentPayment();
+            fragment = new FragmentForm();
             line_first.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             image_shipping.setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
             image_payment.clearColorFilter();

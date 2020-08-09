@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -32,7 +37,7 @@
         <com.novintech.test.utils.element.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="تاریخ تاسیس"
+            android:text="تاریخ "
             android:layout_marginTop="@dimen/spacing_middle"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@color/grey_40"
@@ -40,12 +45,13 @@
 
 
         <com.novintech.test.utils.element.CustomEditText
+            android:id="@+id/txtCreateDate"
             style="@style/EditText.Flat.Grey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:background="@drawable/edit_text_round_bg_outline"
-            android:hint="Email"
+
             android:minHeight="@dimen/spacing_xmlarge"
             android:text="22-03-1399" />
 
@@ -137,3 +143,4 @@
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
+</layout>

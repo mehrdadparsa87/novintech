@@ -154,7 +154,7 @@ public class CustomView {
         // check if the such typeface exist before
         if (boldTypeface == null) {
             boldTypeface = Typeface.createFromAsset(context.getAssets(),
-                    "fonts/IAvenirLTStd_Medium.otf");
+                    "fonts/IRANYekanMobileMedium.ttf");
             return boldTypeface;
         } else {
             return boldTypeface;
@@ -178,7 +178,7 @@ public class CustomView {
         // check if the such typeface exist before
         if (normalTypeFace == null) {
             normalTypeFace = Typeface.createFromAsset(context.getAssets(),
-                    "fonts/avenirltstd-light.otf");
+                    "fonts/IRANYekanMobileMedium.ttf");
             return normalTypeFace;
         } else {
             return normalTypeFace;
